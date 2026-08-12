@@ -144,7 +144,7 @@ export default function AreaPage({ params }: Props) {
         </div>
       </section>
 
-      <CTABand heading={`Need a joiner in ${loc.name}?`} sub="Free surveys and fixed written quotes across the area — usually within 48 hours of your call." />
+      <CTABand heading={`Need a joiner in ${loc.name}?`} sub="Free surveys and fixed written quotes across the area, usually within 48 hours of your call." />
     </>
   );
 }

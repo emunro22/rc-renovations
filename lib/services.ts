@@ -14,15 +14,15 @@ export const services: Service[] = [
   {
     slug: "kitchen-renovations",
     title: "Kitchen Renovations",
-    short: "Full kitchen strip-outs, fitting and finishing — from flat-pack installs to fully bespoke.",
+    short: "Full kitchen strip-outs, fitting and finishing, from flat-pack installs to fully bespoke.",
     metaTitle: "Kitchen Renovations Glasgow | Kitchen Fitters | RC Renovations",
     metaDescription:
       "Expert kitchen renovations and kitchen fitting across Glasgow and Lanarkshire. Full strip-out, supply and fit or fit-only, worktops, flooring and finishing. Free quotes.",
     intro:
-      "Your kitchen is the hardest-working room in the house. We handle the full renovation — strip-out, first fix, cabinetry, worktops, flooring and finishing — so you deal with one trade from start to finish.",
+      "Your kitchen is the hardest-working room in the house. We handle the full renovation: strip-out, first fix, cabinetry, worktops, flooring and finishing, so you deal with one trade from start to finish.",
     body: [
       "Whether you've bought your units from a high-street supplier and need a fit-only service, or you want us to manage the whole project including design, we work to a fixed written quote with a clear timeline before any work starts.",
-      "Our joiners handle cabinetry, worktop templating and fitting, internal doors, skirtings and facings, while trusted electricians and plumbers we've worked with for years cover the wet and electrical work — all coordinated by us.",
+      "Our joiners handle cabinetry, worktop templating and fitting, internal doors, skirtings and facings, while trusted electricians and plumbers we've worked with for years cover the wet and electrical work, all coordinated by us.",
     ],
     features: [
       "Full strip-out and disposal",
@@ -39,7 +39,7 @@ export const services: Service[] = [
       },
       {
         q: "Can you fit a kitchen I've bought elsewhere?",
-        a: "Yes — fit-only is one of our most requested services. We regularly install kitchens from Howdens, B&Q, Wren and IKEA, and we'll flag any issues with the supplied units before work starts.",
+        a: "Yes, fit-only is one of our most requested services. We regularly install kitchens from Howdens, B&Q, Wren and IKEA, and we'll flag any issues with the supplied units before work starts.",
       },
       {
         q: "Do you handle plumbing and electrics?",
@@ -50,12 +50,12 @@ export const services: Service[] = [
   {
     slug: "bathroom-renovations",
     title: "Bathroom Renovations",
-    short: "Complete bathroom refits — wet walls, tiling, suites and full waterproofing done right.",
+    short: "Complete bathroom refits: wet walls, tiling, suites and full waterproofing done right.",
     metaTitle: "Bathroom Renovations Glasgow | Bathroom Fitters | RC Renovations",
     metaDescription:
       "Full bathroom renovations across Glasgow, Hamilton and Lanarkshire. Wet wall panelling, tiling, new suites, showers and flooring with fixed written quotes.",
     intro:
-      "From dated avocado suites to sleek modern wet rooms — we strip out, refit and finish bathrooms across Glasgow and Lanarkshire with proper waterproofing behind every panel and tile.",
+      "From dated avocado suites to sleek modern wet rooms, we strip out, refit and finish bathrooms across Glasgow and Lanarkshire with proper waterproofing behind every panel and tile.",
     body: [
       "A bathroom only stays looking good if the work behind the walls is right. We take waterproofing, ventilation and pipework seriously, because a leak six months down the line costs far more than doing it properly the first time.",
       "We fit wet wall panelling and traditional tiling, walk-in showers, baths, vanity units and all joinery finishing, coordinating plumbing and electrical work under one schedule.",
@@ -71,10 +71,10 @@ export const services: Service[] = [
     faqs: [
       {
         q: "How much does a bathroom renovation cost in Glasgow?",
-        a: "Most full bathroom refits fall between £4,500 and £9,000 depending on size, spec and whether layout changes are needed. We give a fixed written quote after a free home visit — no surprises mid-job.",
+        a: "Most full bathroom refits fall between £4,500 and £9,000 depending on size, spec and whether layout changes are needed. We give a fixed written quote after a free home visit, no surprises mid-job.",
       },
       {
-        q: "Wet wall or tiles — which is better?",
+        q: "Wet wall or tiles: which is better?",
         a: "Wet wall panels are faster to fit, easier to clean and completely grout-free, which suits busy family bathrooms. Tiles offer more design flexibility. We fit both and will talk you through the trade-offs at the quote stage.",
       },
       {
@@ -89,9 +89,9 @@ export const services: Service[] = [
     short: "Single-storey extensions and garden rooms that add space and value to your home.",
     metaTitle: "Home Extensions Glasgow & Lanarkshire | RC Renovations",
     metaDescription:
-      "Single-storey home extensions across Glasgow and Lanarkshire. From foundations to finishing — joinery-led builds with coordinated trades and fixed quotes.",
+      "Single-storey home extensions across Glasgow and Lanarkshire. From foundations to finishing, joinery-led builds with coordinated trades and fixed quotes.",
     intro:
-      "More space, without moving house. We build single-storey extensions across Glasgow and Lanarkshire — kitchen extensions, sunrooms and garden rooms — managed from groundworks to final coat of paint.",
+      "More space, without moving house. We build single-storey extensions across Glasgow and Lanarkshire: kitchen extensions, sunrooms and garden rooms, managed from groundworks to final coat of paint.",
     body: [
       "An extension is a serious investment, and the difference between a smooth build and a stressful one is coordination. As a joinery-led firm, we manage the full sequence: groundworks, structure, roofing, windows, first and second fix, plastering and decoration.",
       "We'll work alongside your architect on drawings and building warrant requirements, or point you to architects we trust if you're starting from scratch.",
@@ -121,11 +121,11 @@ export const services: Service[] = [
     short: "Turn unused attic space into bedrooms, offices and living space.",
     metaTitle: "Loft Conversions Glasgow | Attic Conversions | RC Renovations",
     metaDescription:
-      "Loft and attic conversions across Glasgow, Hamilton and surrounding areas. Bedrooms, home offices and en-suites — structural work, stairs, insulation and finishing.",
+      "Loft and attic conversions across Glasgow, Hamilton and surrounding areas. Bedrooms, home offices and en-suites, structural work, stairs, insulation and finishing.",
     intro:
       "The cheapest square footage you'll ever add is the space already under your roof. We convert lofts and attics into bedrooms, home offices and en-suite spaces across Glasgow and Lanarkshire.",
     body: [
-      "A proper conversion is more than flooring out an attic — it means structural strengthening, regulation-compliant stairs, insulation that meets current standards, and natural light designed in from the start.",
+      "A proper conversion is more than flooring out an attic: it means structural strengthening, regulation-compliant stairs, insulation that meets current standards, and natural light designed in from the start.",
       "We handle the full package: structural work, Velux and dormer windows, staircases, electrics, plumbing for en-suites, plastering and finishing joinery.",
     ],
     features: [
@@ -143,7 +143,7 @@ export const services: Service[] = [
       },
       {
         q: "Will a loft conversion add value to my home?",
-        a: "An additional bedroom — particularly with an en-suite — is consistently one of the highest-value improvements for Glasgow properties. Local estate agents typically estimate uplifts of 10–20% depending on the area.",
+        a: "An additional bedroom, particularly with an en-suite, is consistently one of the highest-value improvements for Glasgow properties. Local estate agents typically estimate uplifts of 10–20% depending on the area.",
       },
     ],
   },
@@ -153,12 +153,12 @@ export const services: Service[] = [
     short: "Made-to-measure wardrobes, media walls, alcove units and custom carpentry.",
     metaTitle: "Bespoke Joinery Glasgow | Custom Carpentry | RC Renovations",
     metaDescription:
-      "Bespoke joinery in Glasgow and Lanarkshire — fitted wardrobes, media walls, alcove shelving, panelling and custom carpentry, made to measure and hand finished.",
+      "Bespoke joinery in Glasgow and Lanarkshire: fitted wardrobes, media walls, alcove shelving, panelling and custom carpentry, made to measure and hand finished.",
     intro:
-      "This is the craft the business was built on. Fitted wardrobes, media walls, alcove units, wall panelling and one-off pieces — measured, made and finished by time-served joiners.",
+      "This is the craft the business was built on. Fitted wardrobes, media walls, alcove units, wall panelling and one-off pieces, measured, made and finished by time-served joiners.",
     body: [
       "Off-the-shelf furniture never quite fits, especially in older Glasgow tenements and Lanarkshire stone-built homes where no wall is truly straight. Bespoke joinery is built to your walls, your ceiling height and your storage needs.",
-      "Every piece is scribed to the room, finished in your choice of paint or veneer, and fixed properly — no wobble, no gaps, no visible fixings.",
+      "Every piece is scribed to the room, finished in your choice of paint or veneer, and fixed properly: no wobble, no gaps, no visible fixings.",
     ],
     features: [
       "Fitted wardrobes and sliding doors",
@@ -175,7 +175,7 @@ export const services: Service[] = [
       },
       {
         q: "Do you make media walls with electric fires?",
-        a: "Yes — media walls with recessed TVs, electric fires, hidden cabling and LED lighting are one of our most popular projects. We coordinate the electrical work as part of the job.",
+        a: "Yes, media walls with recessed TVs, electric fires, hidden cabling and LED lighting are one of our most popular projects. We coordinate the electrical work as part of the job.",
       },
     ],
   },
@@ -189,7 +189,7 @@ export const services: Service[] = [
     intro:
       "The details that transform a house: crisp new internal doors, properly laid flooring and clean skirtings and facings. Quick to fit, huge visual impact.",
     body: [
-      "We supply and fit internal doors in all styles — panel, glazed, fire-rated — hung properly so they close cleanly for years. Full-house door packages are a speciality.",
+      "We supply and fit internal doors in all styles: panel, glazed, fire-rated, hung properly so they close cleanly for years. Full-house door packages are a speciality.",
       "For flooring we fit laminate, luxury vinyl tile (LVT), engineered hardwood and solid wood, with correct subfloor prep, underlays and trims so the finish lasts.",
     ],
     features: [
@@ -207,7 +207,7 @@ export const services: Service[] = [
       },
       {
         q: "Which flooring is best for kitchens and hallways?",
-        a: "For high-traffic and wet-risk areas we usually recommend LVT — it's waterproof, warm underfoot and extremely hard-wearing. We'll show you samples at the quote visit.",
+        a: "For high-traffic and wet-risk areas we usually recommend LVT: it's waterproof, warm underfoot and extremely hard-wearing. We'll show you samples at the quote visit.",
       },
     ],
   },
@@ -221,7 +221,7 @@ export const services: Service[] = [
     intro:
       "Working from home? Need more space without an extension? We build fully insulated garden rooms and hard-wearing composite decking, designed for Scottish weather.",
     body: [
-      "Our garden rooms are built on proper foundations with insulated floors, walls and roofs, double-glazed doors and full electrics — genuinely usable twelve months a year, not just a shed with plasterboard.",
+      "Our garden rooms are built on proper foundations with insulated floors, walls and roofs, double-glazed doors and full electrics, genuinely usable twelve months a year, not just a shed with plasterboard.",
       "Decking is built with either treated timber or composite boards on a properly constructed sub-frame, with balustrades, steps and lighting as required.",
     ],
     features: [
@@ -239,7 +239,7 @@ export const services: Service[] = [
       },
       {
         q: "Composite or timber decking?",
-        a: "Composite costs more up front but needs virtually no maintenance and won't rot or splinter — a big advantage in the west of Scotland climate. Timber is cheaper and can be re-stained to change the look. We fit both.",
+        a: "Composite costs more up front but needs virtually no maintenance and won't rot or splinter, a big advantage in the west of Scotland climate. Timber is cheaper and can be re-stained to change the look. We fit both.",
       },
     ],
   },
@@ -251,9 +251,9 @@ export const services: Service[] = [
     metaDescription:
       "Complete home renovations across Glasgow and Lanarkshire. Whole-property refurbishments, buy-to-let refits and period property upgrades managed under one contract.",
     intro:
-      "Bought a fixer-upper? Renovating a rental? We manage complete property refurbishments — every room, every trade, one contract, one point of contact.",
+      "Bought a fixer-upper? Renovating a rental? We manage complete property refurbishments: every room, every trade, one contract, one point of contact.",
     body: [
-      "Full renovations live or die on sequencing. We plan the whole job — strip-out, structural alterations, first fix, plastering, second fix, kitchens, bathrooms, flooring and decoration — so trades arrive in the right order and the programme holds.",
+      "Full renovations live or die on sequencing. We plan the whole job: strip-out, structural alterations, first fix, plastering, second fix, kitchens, bathrooms, flooring and decoration, so trades arrive in the right order and the programme holds.",
       "We work on family homes, buy-to-let portfolios and period properties across Glasgow and Lanarkshire, and we're comfortable with the quirks of tenement flats and stone-built houses.",
     ],
     features: [

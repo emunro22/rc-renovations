@@ -7,7 +7,7 @@ export type GalleryCategory =
   | "Roofing & Carpentry";
 
 export type GalleryImage = {
-  /** Path under /public — drop the matching photo in at this exact path and it goes live automatically. */
+  /** Path under /public, drop the matching photo in at this exact path and it goes live automatically. */
   src: string;
   alt: string;
   category: GalleryCategory;
@@ -24,8 +24,8 @@ export const galleryCategories: GalleryCategory[] = [
 ];
 
 // Drop real project photos into /public/gallery/<category-folder>/ using these
-// exact filenames and they'll replace the placeholder tiles automatically —
-// no code changes needed. See /public/gallery/README.txt.
+// exact filenames and they'll replace the placeholder tiles automatically.
+// No code changes needed. See /public/gallery/README.txt.
 export const galleryImages: GalleryImage[] = [
   {
     src: "/gallery/extensions/timber-frame-two-storey-build.jpg",

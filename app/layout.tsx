@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     template: "%s | RC Renovations",
   },
   description:
-    "RC Renovations — trusted joiners and renovation specialists covering Glasgow, Hamilton, Bothwell and Lanarkshire. Kitchens, bathrooms, extensions and bespoke joinery. Free fixed quotes.",
+    "RC Renovations: trusted joiners and renovation specialists covering Glasgow, Hamilton, Bothwell and Lanarkshire. Kitchens, bathrooms, extensions and bespoke joinery. Free fixed quotes.",
   keywords: [
     "joiners Glasgow",
     "renovations Glasgow",

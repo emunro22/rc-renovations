@@ -4,7 +4,7 @@ import Reveal from "./Reveal";
 
 export default function CTABand({
   heading = "Ready to start your project?",
-  sub = "Tell us what you have in mind and we'll arrange a free survey and fixed written quote — usually within 48 hours.",
+  sub = "Tell us what you have in mind and we'll arrange a free survey and fixed written quote, usually within 48 hours.",
 }: {
   heading?: string;
   sub?: string;

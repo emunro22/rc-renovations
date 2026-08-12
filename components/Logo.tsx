@@ -2,7 +2,7 @@ import Image from "next/image";
 
 /**
  * The source file (public/logo.png) is a circular badge on a black square
- * canvas — the badge sits inset from the canvas edges. Clipping to a circle
+ * canvas, the badge sits inset from the canvas edges. Clipping to a circle
  * alone still leaves a thin black ring, so the image is scaled up slightly
  * inside an overflow-hidden circle to crop that margin out completely.
  */

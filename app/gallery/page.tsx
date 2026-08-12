@@ -8,7 +8,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Our Work | Renovation & Joinery Projects",
   description:
-    "Recent joinery and renovation projects by RC Renovations across Glasgow and Lanarkshire — extensions, decking, flooring, internal doors and bespoke joinery.",
+    "Recent joinery and renovation projects by RC Renovations across Glasgow and Lanarkshire: extensions, decking, flooring, internal doors and bespoke joinery.",
   alternates: { canonical: "/gallery" },
 };
 
@@ -74,7 +74,7 @@ export default function GalleryPage() {
       <section className="border-t border-edge py-10">
         <div className="container-site">
           <p className="text-center text-sm text-mist">
-            Project photos are being added regularly — follow{" "}
+            Project photos are being added regularly, follow{" "}
             <a
               href={site.social.instagram}
               target="_blank"

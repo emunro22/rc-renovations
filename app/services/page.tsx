@@ -7,7 +7,7 @@ import { services } from "@/lib/services";
 export const metadata: Metadata = {
   title: "Joinery & Renovation Services Glasgow & Lanarkshire",
   description:
-    "Our full range of joinery and renovation services across Glasgow and Lanarkshire — kitchens, bathrooms, extensions, loft conversions, bespoke joinery and more.",
+    "Our full range of joinery and renovation services across Glasgow and Lanarkshire: kitchens, bathrooms, extensions, loft conversions, bespoke joinery and more.",
   alternates: { canonical: "/services" },
 };
 
@@ -53,7 +53,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <CTABand heading="Not sure which service you need?" sub="Describe the job in plain terms and we'll tell you exactly what's involved — no jargon, no obligation." />
+      <CTABand heading="Not sure which service you need?" sub="Describe the job in plain terms and we'll tell you exactly what's involved, no jargon, no obligation." />
     </>
   );
 }

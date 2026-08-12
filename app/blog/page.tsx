@@ -7,7 +7,7 @@ import { blogPosts } from "@/lib/blog";
 export const metadata: Metadata = {
   title: "Renovation & Joinery Blog | Glasgow & Lanarkshire",
   description:
-    "Practical renovation advice from RC Renovations — flooring, decking, loft conversions and budgeting guidance for homeowners in Glasgow and Lanarkshire.",
+    "Practical renovation advice from RC Renovations: flooring, decking, loft conversions and budgeting guidance for homeowners in Glasgow and Lanarkshire.",
   alternates: { canonical: "/blog" },
 };
 
@@ -26,7 +26,7 @@ export default function BlogPage() {
               Renovation <span className="steel-text">advice &amp; guides</span>
             </h1>
             <p className="mt-5 max-w-2xl text-lg text-mist">
-              Straight-talking guides on flooring, decking, loft conversions and budgeting — written from
+              Straight-talking guides on flooring, decking, loft conversions and budgeting, written from
               real jobs across Glasgow and Lanarkshire.
             </p>
           </Reveal>

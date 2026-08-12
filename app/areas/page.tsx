@@ -22,7 +22,7 @@ export default function AreasPage() {
               Local joiners across <span className="steel-text">Glasgow &amp; Lanarkshire</span>
             </h1>
             <p className="mt-5 max-w-2xl text-lg text-mist">
-              We work throughout the Greater Glasgow area with no travel charges — from West End tenements
+              We work throughout the Greater Glasgow area with no travel charges, from West End tenements
               to Lanarkshire villages. Pick your area to see what we do near you.
             </p>
           </Reveal>

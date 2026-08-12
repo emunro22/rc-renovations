@@ -42,9 +42,15 @@ export default function Hero() {
 
       <div className="container-site relative grid items-center gap-12 py-20 md:py-28 lg:grid-cols-[1.2fr,0.8fr]">
         <div>
-          <motion.p {...up(0)} className="eyebrow">
-            Joinery &middot; Renovations &middot; Glasgow &amp; Lanarkshire
-          </motion.p>
+          <div className="relative">
+            <Logo
+              size={140}
+              className="pointer-events-none absolute -left-4 -top-10 -z-10 opacity-10"
+            />
+            <motion.p {...up(0)} className="eyebrow">
+              Joinery &middot; Renovations &middot; Glasgow &amp; Lanarkshire
+            </motion.p>
+          </div>
           <motion.h1
             {...up(0.1)}
             className="mt-5 font-display text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl"

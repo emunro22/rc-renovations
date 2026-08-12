@@ -26,8 +26,8 @@ and programme before any work begins, and a walkthrough with the customer at
 completion. Reviewed 5/5 on Google by verified customers.
 
 ## Key pages
-- /services — full list of services with pricing guidance and FAQs
-- /areas — local pages for each town/area covered
-- /gallery — completed project photos by category
-- /blog — renovation guides and local advice
-- /contact — free quote enquiry form
+- /services: full list of services with pricing guidance and FAQs
+- /areas: local pages for each town/area covered
+- /gallery: completed project photos by category
+- /blog: renovation guides and local advice
+- /contact: free quote enquiry form

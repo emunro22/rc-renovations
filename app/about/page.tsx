@@ -6,7 +6,7 @@ import Logo from "@/components/Logo";
 export const metadata: Metadata = {
   title: "About Us | Joiners & Renovation Specialists",
   description:
-    "RC Renovations is a joinery-led renovation firm covering Glasgow and Lanarkshire — time-served tradesmen, fixed quotes and a finish we put our name to.",
+    "RC Renovations is a joinery-led renovation firm covering Glasgow and Lanarkshire: time-served tradesmen, fixed quotes and a finish we put our name to.",
   alternates: { canonical: "/about" },
 };
 
@@ -21,7 +21,7 @@ const values = [
   },
   {
     title: "Tidy sites",
-    text: "Dust sheets down, tools away, floors swept — every single day. Your home stays a home while we work in it.",
+    text: "Dust sheets down, tools away, floors swept, every single day. Your home stays a home while we work in it.",
   },
   {
     title: "Straight talking",
@@ -41,7 +41,7 @@ export default function AboutPage() {
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-mist">
               RC Renovations is a joinery-led renovation firm working across Glasgow and Lanarkshire.
-              We built this business the old-fashioned way — one recommended job at a time — and we protect
+              We built this business the old-fashioned way, one recommended job at a time, and we protect
               that reputation on every project, whether it&apos;s hanging a single door or refurbishing a whole house.
             </p>
             <p className="mt-4 max-w-2xl leading-relaxed text-mist">

@@ -2,7 +2,7 @@ HOW TO ADD YOUR PROJECT PHOTOS
 ================================
 
 Drop each photo into the matching folder below using the EXACT filename
-listed. The website is already wired up to load these — as soon as a file
+listed. The website is already wired up to load these, as soon as a file
 appears at the right path it replaces the placeholder tile automatically,
 on the homepage "Our Work" slideshow and on the /gallery page. No code
 changes needed.

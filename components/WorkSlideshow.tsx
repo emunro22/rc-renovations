@@ -21,7 +21,7 @@ export default function WorkSlideshow() {
 
   return (
     <section className="relative overflow-hidden border-t border-edge">
-      {/* Background slideshow — kept light so the photos read clearly, with just
+      {/* Background slideshow, kept light so the photos read clearly, with just
           enough of a gradient at the base for the text to stay legible. */}
       <div aria-hidden className="absolute inset-0">
         {slides.map((img, i) => (
@@ -45,7 +45,7 @@ export default function WorkSlideshow() {
             See the finish for yourself
           </h2>
           <p className="mt-4 max-w-xl text-mist">
-            Extensions, decking, flooring, doors and bespoke joinery — a selection of jobs completed
+            Extensions, decking, flooring, doors and bespoke joinery: a selection of jobs completed
             across Glasgow and Lanarkshire.
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-4">

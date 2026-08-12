@@ -11,7 +11,7 @@ import { site } from "@/lib/site";
 const steps = [
   {
     title: "Free survey & quote",
-    text: "We visit, measure and listen to what you want, then send a fixed written quote — usually within 48 hours.",
+    text: "We visit, measure and listen to what you want, then send a fixed written quote, usually within 48 hours.",
   },
   {
     title: "Agreed plan & dates",
@@ -32,6 +32,8 @@ export default function HomePage() {
     <>
       <Hero />
 
+      <WorkSlideshow />
+
       {/* Services */}
       <section className="roofline border-t border-edge py-20" id="services">
         <div className="container-site">
@@ -41,7 +43,7 @@ export default function HomePage() {
               Joinery &amp; renovation services
             </h2>
             <p className="mt-4 max-w-2xl text-mist">
-              From a single door to a whole-house refurbishment — one firm, one point of contact, one standard of finish.
+              From a single door to a whole-house refurbishment: one firm, one point of contact, one standard of finish.
             </p>
           </Reveal>
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -63,8 +65,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      <WorkSlideshow />
 
       {/* Process */}
       <section className="border-t border-edge bg-panel py-20">
@@ -124,7 +124,7 @@ export default function HomePage() {
                   <blockquote className="mt-4 text-sm leading-relaxed text-steel">&ldquo;{t.quote}&rdquo;</blockquote>
                   <figcaption className="mt-4 text-sm">
                     <span className="font-semibold text-snow">{t.name}</span>
-                    <span className="text-mist"> — Google review</span>
+                    <span className="text-mist"> · Google review</span>
                   </figcaption>
                 </figure>
               </Reveal>

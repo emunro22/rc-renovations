@@ -6,7 +6,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Contact Us | Free Quotes Glasgow & Lanarkshire",
   description:
-    "Get a free, fixed written quote from RC Renovations. Call, email or use our enquiry form — we cover Glasgow, Hamilton, Bothwell and all of Lanarkshire.",
+    "Get a free, fixed written quote from RC Renovations. Call, email or use our enquiry form, we cover Glasgow, Hamilton, Bothwell and all of Lanarkshire.",
   alternates: { canonical: "/contact" },
 };
 
@@ -22,7 +22,7 @@ export default function ContactPage() {
             </h1>
             <p className="mt-5 text-lg leading-relaxed text-mist">
               Tell us about the job and we&apos;ll arrange a free survey. Fixed written quotes,
-              usually within 48 hours — and no obligation whatsoever.
+              usually within 48 hours, and no obligation whatsoever.
             </p>
 
             <div className="mt-10 space-y-5">

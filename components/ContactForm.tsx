@@ -48,7 +48,7 @@ export default function ContactForm() {
         </div>
         <h3 className="mt-5 font-display text-2xl font-bold">Enquiry sent</h3>
         <p className="mt-2 text-mist">
-          Thanks — we&apos;ve got your details and will be in touch shortly, usually the same working day.
+          Thanks, we&apos;ve got your details and will be in touch shortly, usually the same working day.
         </p>
       </motion.div>
     );
@@ -107,7 +107,7 @@ export default function ContactForm() {
 
       {status === "error" && (
         <p className="rounded-md border border-red-500/40 bg-red-500/10 px-4 py-3 text-sm text-red-300">
-          {error} — or call us directly instead.
+          {error}, or call us directly instead.
         </p>
       )}
 

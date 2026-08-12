@@ -45,6 +45,19 @@ export default function Header() {
               {l.label}
             </Link>
           ))}
+          <a
+            href={site.social.instagram}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="RC Renovations on Instagram"
+            className="flex h-9 w-9 items-center justify-center rounded-full border border-edge text-steel transition-colors hover:border-bright hover:text-bright"
+          >
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden>
+              <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" strokeWidth="1.8" />
+              <circle cx="12" cy="12" r="4.2" stroke="currentColor" strokeWidth="1.8" />
+              <circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" />
+            </svg>
+          </a>
           <a href={`tel:${site.phoneHref}`} className="btn-primary !px-5 !py-2.5">
             {site.phone}
           </a>
@@ -99,6 +112,19 @@ export default function Header() {
                 className="btn-ghost mt-2"
               >
                 WhatsApp Us
+              </a>
+              <a
+                href={site.social.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-3 flex items-center gap-2 px-3 py-2 font-display text-sm font-semibold uppercase tracking-wider text-steel"
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden>
+                  <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" strokeWidth="1.8" />
+                  <circle cx="12" cy="12" r="4.2" stroke="currentColor" strokeWidth="1.8" />
+                  <circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" />
+                </svg>
+                Instagram
               </a>
             </div>
           </motion.nav>

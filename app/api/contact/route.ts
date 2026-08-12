@@ -11,7 +11,7 @@ export async function POST(req: Request) {
     const body = await req.json();
     const { name, phone, email, service, area, message, company } = body ?? {};
 
-    // Honeypot — silently accept bot submissions
+    // Honeypot: silently accept bot submissions
     if (company) return NextResponse.json({ ok: true });
 
     if (!name || !phone || !email || !message) {
@@ -59,7 +59,7 @@ export async function POST(req: Request) {
       from: `RC Renovations Website <${from}>`,
       to: [to],
       replyTo: String(email),
-      subject: `New enquiry: ${service || "General"} — ${name}`,
+      subject: `New enquiry: ${service || "General"} from ${name}`,
       html,
     });
 

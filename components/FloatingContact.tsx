@@ -11,9 +11,9 @@ export default function FloatingContact() {
       <a
         href={`tel:${site.phoneHref}`}
         aria-label={`Call RC Renovations on ${site.phone}`}
-        className="flex h-14 w-14 items-center justify-center rounded-full bg-blue-sheen text-white shadow-glow transition-transform duration-200 hover:scale-105 active:scale-95"
+        className="flex h-16 w-16 items-center justify-center rounded-full bg-blue-sheen text-white shadow-glow transition-transform duration-200 hover:scale-105 active:scale-95"
       >
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden>
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden>
           <path
             d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"
             stroke="#fff"
@@ -27,9 +27,9 @@ export default function FloatingContact() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Message RC Renovations on WhatsApp"
-        className="flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-[0_0_40px_rgba(37,211,102,0.35)] transition-transform duration-200 hover:scale-105 active:scale-95"
+        className="flex h-16 w-16 items-center justify-center rounded-full bg-[#25D366] text-white shadow-[0_0_40px_rgba(37,211,102,0.35)] transition-transform duration-200 hover:scale-105 active:scale-95"
       >
-        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden>
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" aria-hidden>
           <path
             d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3z"
             fill="#fff"
