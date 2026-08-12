@@ -45,7 +45,7 @@ export default function Hero() {
         aria-hidden
         className="pointer-events-none absolute inset-0 -z-10 flex items-center justify-center opacity-[0.16] lg:hidden"
       >
-        <Logo size={400} className="sm:hidden" />
+        <Logo size={280} className="sm:hidden" />
         <Logo size={540} className="hidden sm:block" />
       </div>
 
@@ -66,11 +66,11 @@ export default function Hero() {
             Kitchens, bathrooms, extensions and bespoke joinery by time-served tradesmen.
             Fixed written quotes, one point of contact, and work we&apos;re proud to put our name to.
           </motion.p>
-          <motion.div {...up(0.3)} className="mt-9 flex flex-wrap gap-4">
-            <Link href="/contact" className="btn-primary">
+          <motion.div {...up(0.3)} className="mt-9 flex flex-nowrap gap-2 sm:flex-wrap sm:gap-4">
+            <Link href="/contact" className="btn-primary !px-4 !py-3 text-xs sm:!px-6 sm:!py-3.5 sm:text-sm">
               Get a Free Quote
             </Link>
-            <a href={`tel:${site.phoneHref}`} className="btn-ghost">
+            <a href={`tel:${site.phoneHref}`} className="btn-ghost !px-4 !py-3 text-xs sm:!px-6 sm:!py-3.5 sm:text-sm">
               Call {site.phone}
             </a>
           </motion.div>
