@@ -40,17 +40,20 @@ export default function Hero() {
         <rect x="42" y="44" width="16" height="16" />
       </svg>
 
-      <div className="container-site relative grid items-center gap-12 py-20 md:py-28 lg:grid-cols-[1.2fr,0.8fr]">
+      {/* Centered logo watermark, behind the text */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 -z-10 flex items-center justify-center opacity-[0.16]"
+      >
+        <Logo size={400} className="sm:hidden" />
+        <Logo size={540} className="hidden sm:block" />
+      </div>
+
+      <div className="container-site relative flex max-w-7xl flex-col items-start gap-12 pb-20 pt-8 md:pb-28 md:pt-12">
         <div>
-          <div className="relative">
-            <Logo
-              size={140}
-              className="pointer-events-none absolute -left-4 -top-10 -z-10 opacity-10"
-            />
-            <motion.p {...up(0)} className="eyebrow">
-              Joinery &middot; Renovations &middot; Glasgow &amp; Lanarkshire
-            </motion.p>
-          </div>
+          <motion.p {...up(0)} className="eyebrow">
+            Joinery &middot; Renovations &middot; Glasgow &amp; Lanarkshire
+          </motion.p>
           <motion.h1
             {...up(0.1)}
             className="mt-5 font-display text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl"
@@ -82,16 +85,6 @@ export default function Hero() {
             ))}
           </motion.ul>
         </div>
-
-        <motion.div
-          initial={reduce ? false : { opacity: 0, scale: 0.92 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.9, delay: 0.25, ease: [0.21, 0.6, 0.35, 1] }}
-          className="relative mx-auto hidden aspect-square w-full max-w-sm lg:block"
-        >
-          <div className="absolute inset-0 -z-10 rounded-full bg-royal/30 blur-3xl" />
-          <Logo size={420} priority className="shadow-2xl ring-1 ring-white/10" />
-        </motion.div>
       </div>
     </section>
   );

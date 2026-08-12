@@ -32,10 +32,28 @@ export default function HomePage() {
     <>
       <Hero />
 
+      {/* Scroll cue */}
+      <section className="border-t border-edge py-3">
+        <div className="container-site flex items-center justify-center gap-2 text-center">
+          <p className="font-display text-xs font-semibold uppercase tracking-wider text-steel">
+            Joinery and renovation services
+          </p>
+          <a
+            href="#services"
+            aria-label="Scroll to joinery and renovation services"
+            className="flex h-7 w-7 items-center justify-center rounded-full border border-edge text-steel transition-colors hover:border-bright hover:text-bright animate-bounce"
+          >
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden>
+              <path d="M5 9l7 7 7-7" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </a>
+        </div>
+      </section>
+
       <WorkSlideshow />
 
       {/* Services */}
-      <section className="roofline border-t border-edge py-20" id="services">
+      <section className="roofline scroll-mt-20 border-t border-edge py-20" id="services">
         <div className="container-site">
           <Reveal>
             <p className="eyebrow">What we do</p>
