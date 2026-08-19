@@ -33,11 +33,11 @@ body {
 }
 
 .btn-primary {
-  @apply inline-flex items-center justify-center gap-2 rounded-md bg-blue-sheen px-6 py-3.5 font-display text-sm font-bold uppercase tracking-wider text-white shadow-glow transition-transform duration-200 hover:scale-[1.03] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bright;
+  @apply inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md bg-blue-sheen px-6 py-3.5 font-display text-sm font-bold uppercase tracking-wider text-white shadow-glow transition-transform duration-200 hover:scale-[1.03] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bright;
 }
 
 .btn-ghost {
-  @apply inline-flex items-center justify-center gap-2 rounded-md border border-steel/30 px-6 py-3.5 font-display text-sm font-bold uppercase tracking-wider text-steel transition-colors duration-200 hover:border-bright hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bright;
+  @apply inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md border border-steel/30 px-6 py-3.5 font-display text-sm font-bold uppercase tracking-wider text-steel transition-colors duration-200 hover:border-bright hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bright;
 }
 
 .card {

@@ -1,10 +1,8 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
+import { renderBusinessEmail, renderCustomerEmail } from "@/lib/email";
 
 export const runtime = "nodejs";
-
-const escapeHtml = (s: string) =>
-  s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 
 export async function POST(req: Request) {
   try {
@@ -35,37 +33,51 @@ export async function POST(req: Request) {
 
     const resend = new Resend(apiKey);
 
-    const html = `
-      <div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto">
-        <div style="background:#0D1526;padding:24px;border-radius:12px 12px 0 0">
-          <h1 style="color:#EEF1F6;margin:0;font-size:20px">New website enquiry</h1>
-          <p style="color:#8B94A6;margin:6px 0 0;font-size:13px">rcrenovations.co.uk</p>
-        </div>
-        <div style="border:1px solid #e5e7eb;border-top:none;padding:24px;border-radius:0 0 12px 12px">
-          <table style="width:100%;font-size:14px;color:#111">
-            <tr><td style="padding:6px 0;color:#6b7280;width:110px">Name</td><td style="padding:6px 0"><strong>${escapeHtml(String(name))}</strong></td></tr>
-            <tr><td style="padding:6px 0;color:#6b7280">Phone</td><td style="padding:6px 0"><a href="tel:${escapeHtml(String(phone))}">${escapeHtml(String(phone))}</a></td></tr>
-            <tr><td style="padding:6px 0;color:#6b7280">Email</td><td style="padding:6px 0"><a href="mailto:${escapeHtml(String(email))}">${escapeHtml(String(email))}</a></td></tr>
-            <tr><td style="padding:6px 0;color:#6b7280">Service</td><td style="padding:6px 0">${escapeHtml(String(service || "Not specified"))}</td></tr>
-            <tr><td style="padding:6px 0;color:#6b7280">Area</td><td style="padding:6px 0">${escapeHtml(String(area || "Not specified"))}</td></tr>
-          </table>
-          <hr style="border:none;border-top:1px solid #e5e7eb;margin:16px 0" />
-          <p style="font-size:14px;color:#111;white-space:pre-wrap">${escapeHtml(String(message))}</p>
-        </div>
-      </div>
-    `;
+    const enquiry = {
+      name: String(name),
+      phone: String(phone),
+      email: String(email),
+      service: service ? String(service) : undefined,
+      area: area ? String(area) : undefined,
+      message: String(message),
+    };
 
-    const { error } = await resend.emails.send({
-      from: `RC Renovations Website <${from}>`,
-      to: [to],
-      replyTo: String(email),
-      subject: `New enquiry: ${service || "General"} from ${name}`,
-      html,
-    });
+    const fromHeader = `RC Renovations <${from}>`;
+    const businessRecipients = to.split(",").map((s) => s.trim()).filter(Boolean);
 
-    if (error) {
-      console.error("Resend error:", error);
+    const [businessResult, customerResult] = await Promise.allSettled([
+      resend.emails.send({
+        from: fromHeader,
+        to: businessRecipients,
+        replyTo: enquiry.email,
+        subject: `New enquiry: ${enquiry.service || "General"} from ${enquiry.name}`,
+        html: renderBusinessEmail(enquiry),
+      }),
+      resend.emails.send({
+        from: fromHeader,
+        to: [enquiry.email],
+        replyTo: businessRecipients[0],
+        subject: "We've received your enquiry, RC Renovations",
+        html: renderCustomerEmail(enquiry),
+      }),
+    ]);
+
+    const businessFailed = businessResult.status === "rejected" || businessResult.value.error;
+    if (businessFailed) {
+      console.error(
+        "Resend business email error:",
+        businessResult.status === "rejected" ? businessResult.reason : businessResult.value.error,
+      );
       return NextResponse.json({ error: "Failed to send. Please call us instead." }, { status: 502 });
+    }
+
+    const customerFailed = customerResult.status === "rejected" || customerResult.value.error;
+    if (customerFailed) {
+      // The enquiry made it to us, so don't fail the request, just log it.
+      console.error(
+        "Resend customer confirmation error:",
+        customerResult.status === "rejected" ? customerResult.reason : customerResult.value.error,
+      );
     }
 
     return NextResponse.json({ ok: true });
