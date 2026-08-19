@@ -2,7 +2,7 @@ export const site = {
   name: "RC Renovations",
   legalName: "RC Renovations",
   tagline: "Joinery & Renovations, Glasgow & Lanarkshire",
-  url: "https://www.rcrenovations.co.uk",
+  url: "https://www.rc-renovations.co.uk",
   phone: "07496 410353",
   phoneHref: "+447496410353",
   whatsappNumber: "447496410353",

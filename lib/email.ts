@@ -93,7 +93,7 @@ export function renderBusinessEmail(enquiry: Enquiry) {
   const { name, phone, email, service, area, message } = enquiry;
   const body = `
     <h1 style="margin:0 0 6px;font-family:Arial,Helvetica,sans-serif;font-size:20px;color:${colors.snow};">New website enquiry</h1>
-    <p style="margin:0 0 22px;font-family:Arial,Helvetica,sans-serif;font-size:13px;color:${colors.mist};">Submitted via rcrenovations.co.uk</p>
+    <p style="margin:0 0 22px;font-family:Arial,Helvetica,sans-serif;font-size:13px;color:${colors.mist};">Submitted via rc-renovations.co.uk</p>
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:22px;">
       ${detailRow("Name", name)}
       ${detailRow("Phone", phone, `tel:${phone}`)}
