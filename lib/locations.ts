@@ -13,7 +13,7 @@ export const locations: Location[] = [
   {
     slug: "glasgow",
     name: "Glasgow",
-    metaTitle: "Joinery & Renovations Glasgow | RC Renovations",
+    metaTitle: "Joinery & Renovations Glasgow",
     metaDescription:
       "Trusted joiners and renovation specialists in Glasgow. Kitchens, bathrooms, bespoke joinery and full refurbishments across the city. Free fixed quotes.",
     intro:
@@ -28,7 +28,7 @@ export const locations: Location[] = [
   {
     slug: "lanarkshire",
     name: "Lanarkshire",
-    metaTitle: "Joinery & Renovations Lanarkshire | RC Renovations",
+    metaTitle: "Joinery & Renovations Lanarkshire",
     metaDescription:
       "Joinery and renovation services across North and South Lanarkshire. Kitchens, bathrooms, extensions and bespoke joinery with free fixed quotes.",
     intro:
@@ -43,7 +43,7 @@ export const locations: Location[] = [
   {
     slug: "hamilton",
     name: "Hamilton",
-    metaTitle: "Joiners Hamilton | Renovations & Joinery | RC Renovations",
+    metaTitle: "Joiners Hamilton | Renovations & Joinery",
     metaDescription:
       "Local joiners and renovation specialists in Hamilton, South Lanarkshire. Kitchens, bathrooms, fitted wardrobes and full renovations. Free quotes.",
     intro:
@@ -58,7 +58,7 @@ export const locations: Location[] = [
   {
     slug: "bothwell",
     name: "Bothwell",
-    metaTitle: "Joiners Bothwell | Renovations & Bespoke Joinery | RC Renovations",
+    metaTitle: "Joiners Bothwell | Renovations & Bespoke Joinery",
     metaDescription:
       "Renovations and bespoke joinery in Bothwell, South Lanarkshire. High-end kitchens, extensions, fitted wardrobes and period property work. Free quotes.",
     intro:
@@ -73,7 +73,7 @@ export const locations: Location[] = [
   {
     slug: "motherwell",
     name: "Motherwell",
-    metaTitle: "Joiners Motherwell | Renovations & Joinery | RC Renovations",
+    metaTitle: "Joiners Motherwell | Renovations & Joinery",
     metaDescription:
       "Renovation and joinery services in Motherwell and Wishaw. Kitchens, bathrooms, doors, flooring and full refits from trusted local joiners. Free quotes.",
     intro:
@@ -88,7 +88,7 @@ export const locations: Location[] = [
   {
     slug: "east-kilbride",
     name: "East Kilbride",
-    metaTitle: "Joiners East Kilbride | Renovations & Joinery | RC Renovations",
+    metaTitle: "Joiners East Kilbride | Renovations & Joinery",
     metaDescription:
       "Renovations, kitchens, bathrooms and bespoke joinery in East Kilbride. Trusted local joiners covering all EK neighbourhoods. Free fixed quotes.",
     intro:
@@ -103,7 +103,7 @@ export const locations: Location[] = [
   {
     slug: "uddingston",
     name: "Uddingston",
-    metaTitle: "Joiners Uddingston | Renovations & Joinery | RC Renovations",
+    metaTitle: "Joiners Uddingston | Renovations & Joinery",
     metaDescription:
       "Local joiners in Uddingston covering renovations, kitchens, bathrooms and bespoke joinery. Serving Uddingston, Tannochside and Birkenshaw. Free quotes.",
     intro:
@@ -118,7 +118,7 @@ export const locations: Location[] = [
   {
     slug: "blantyre",
     name: "Blantyre",
-    metaTitle: "Joiners Blantyre | Renovations & Joinery | RC Renovations",
+    metaTitle: "Joiners Blantyre | Renovations & Joinery",
     metaDescription:
       "Renovation and joinery services in Blantyre, South Lanarkshire. Kitchens, bathrooms, flooring and full refits from trusted local joiners. Free quotes.",
     intro:
@@ -133,7 +133,7 @@ export const locations: Location[] = [
   {
     slug: "cambuslang",
     name: "Cambuslang",
-    metaTitle: "Joiners Cambuslang | Renovations & Joinery | RC Renovations",
+    metaTitle: "Joiners Cambuslang | Renovations & Joinery",
     metaDescription:
       "Joinery and renovation services in Cambuslang and Halfway. Kitchens, bathrooms, bespoke joinery and full renovations. Free fixed quotes.",
     intro:
@@ -148,7 +148,7 @@ export const locations: Location[] = [
   {
     slug: "rutherglen",
     name: "Rutherglen",
-    metaTitle: "Joiners Rutherglen | Renovations & Joinery | RC Renovations",
+    metaTitle: "Joiners Rutherglen | Renovations & Joinery",
     metaDescription:
       "Renovations, kitchens, bathrooms and joinery in Rutherglen and Burnside. Trusted local joiners with free fixed quotes.",
     intro:
@@ -163,7 +163,7 @@ export const locations: Location[] = [
   {
     slug: "wishaw",
     name: "Wishaw",
-    metaTitle: "Joiners Wishaw | Renovations & Joinery | RC Renovations",
+    metaTitle: "Joiners Wishaw | Renovations & Joinery",
     metaDescription:
       "Joinery and renovation services in Wishaw, North Lanarkshire. Kitchens, bathrooms, doors, flooring and full renovations. Free quotes.",
     intro:
@@ -178,7 +178,7 @@ export const locations: Location[] = [
   {
     slug: "bellshill",
     name: "Bellshill",
-    metaTitle: "Joiners Bellshill | Renovations & Joinery | RC Renovations",
+    metaTitle: "Joiners Bellshill | Renovations & Joinery",
     metaDescription:
       "Renovation and joinery services in Bellshill and Mossend. Kitchens, bathrooms, flooring and bespoke joinery from trusted local joiners.",
     intro:

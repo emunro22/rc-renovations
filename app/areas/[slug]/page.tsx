@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import Reveal from "@/components/Reveal";
 import CTABand from "@/components/CTABand";
 import { locations, getLocation } from "@/lib/locations";
-import { getService } from "@/lib/services";
+import { services, getService } from "@/lib/services";
 import { site } from "@/lib/site";
 
 type Props = { params: { slug: string } };
@@ -98,9 +98,24 @@ export default function AreaPage({ params }: Props) {
               <h2 className="mt-12 font-display text-2xl font-bold">Popular in {loc.name}</h2>
               <div className="mt-6 grid gap-5 sm:grid-cols-3">
                 {popular.map((s) => (
-                  <Link key={s.slug} href={`/services/${s.slug}`} className="card group block">
+                  <Link key={s.slug} href={`/services/${s.slug}/${loc.slug}`} className="card group block">
                     <h3 className="font-display font-bold group-hover:text-bright">{s.title}</h3>
                     <p className="mt-2 text-sm text-mist">{s.short}</p>
+                  </Link>
+                ))}
+              </div>
+            </Reveal>
+
+            <Reveal delay={0.1}>
+              <h2 className="mt-12 font-display text-2xl font-bold">All services in {loc.name}</h2>
+              <div className="mt-6 flex flex-wrap gap-2.5">
+                {services.map((s) => (
+                  <Link
+                    key={s.slug}
+                    href={`/services/${s.slug}/${loc.slug}`}
+                    className="rounded-full border border-edge px-4 py-2 text-sm text-steel hover:border-bright hover:text-white"
+                  >
+                    {s.title} in {loc.name}
                   </Link>
                 ))}
               </div>

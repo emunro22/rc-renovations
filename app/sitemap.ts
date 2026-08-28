@@ -30,6 +30,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
+  const serviceAreaPages = services.flatMap((s) =>
+    locations.map((l) => ({
+      url: `${site.url}/services/${s.slug}/${l.slug}`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.65,
+    }))
+  );
+
   const blogPages = blogPosts.map((p) => ({
     url: `${site.url}/blog/${p.slug}`,
     lastModified: new Date(p.date),
@@ -37,5 +46,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...staticPages, ...servicePages, ...areaPages, ...blogPages];
+  return [...staticPages, ...servicePages, ...areaPages, ...serviceAreaPages, ...blogPages];
 }

@@ -132,10 +132,10 @@ export default function ServicePage({ params }: Props) {
                 <hr className="my-5 border-edge" />
                 <h3 className="font-display text-sm font-bold uppercase tracking-wider text-mist">Available in</h3>
                 <div className="mt-3 flex flex-wrap gap-2">
-                  {locations.slice(0, 8).map((l) => (
+                  {locations.map((l) => (
                     <Link
                       key={l.slug}
-                      href={`/areas/${l.slug}`}
+                      href={`/services/${service.slug}/${l.slug}`}
                       className="rounded-full border border-edge px-3 py-1 text-xs text-steel hover:border-bright hover:text-white"
                     >
                       {l.name}

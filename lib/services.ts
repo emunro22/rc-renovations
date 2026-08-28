@@ -15,7 +15,7 @@ export const services: Service[] = [
     slug: "kitchen-renovations",
     title: "Kitchen Renovations",
     short: "Full kitchen strip-outs, fitting and finishing, from flat-pack installs to fully bespoke.",
-    metaTitle: "Kitchen Renovations Glasgow | Kitchen Fitters | RC Renovations",
+    metaTitle: "Kitchen Renovations Glasgow | Kitchen Fitters",
     metaDescription:
       "Expert kitchen renovations and kitchen fitting across Glasgow and Lanarkshire. Full strip-out, supply and fit or fit-only, worktops, flooring and finishing. Free quotes.",
     intro:
@@ -31,6 +31,7 @@ export const services: Service[] = [
       "Coordinated plumbing and electrics",
       "Flooring, tiling and decoration",
       "Fixed written quotes",
+      "Kitchen door and drawer front replacement",
     ],
     faqs: [
       {
@@ -51,7 +52,7 @@ export const services: Service[] = [
     slug: "bathroom-renovations",
     title: "Bathroom Renovations",
     short: "Complete bathroom refits: wet walls, tiling, suites and full waterproofing done right.",
-    metaTitle: "Bathroom Renovations Glasgow | Bathroom Fitters | RC Renovations",
+    metaTitle: "Bathroom Renovations Glasgow | Bathroom Fitters",
     metaDescription:
       "Full bathroom renovations across Glasgow, Hamilton and Lanarkshire. Wet wall panelling, tiling, new suites, showers and flooring with fixed written quotes.",
     intro:
@@ -67,6 +68,7 @@ export const services: Service[] = [
       "Vanity units and bespoke storage",
       "Coordinated plumbing and electrics",
       "Anti-slip and LVT flooring",
+      "Bath panels and pipework boxing-in",
     ],
     faqs: [
       {
@@ -87,7 +89,7 @@ export const services: Service[] = [
     slug: "home-extensions",
     title: "Home Extensions",
     short: "Single-storey extensions and garden rooms that add space and value to your home.",
-    metaTitle: "Home Extensions Glasgow & Lanarkshire | RC Renovations",
+    metaTitle: "Home Extensions Glasgow & Lanarkshire",
     metaDescription:
       "Single-storey home extensions across Glasgow and Lanarkshire. From foundations to finishing, joinery-led builds with coordinated trades and fixed quotes.",
     intro:
@@ -103,6 +105,7 @@ export const services: Service[] = [
       "Full first and second fix joinery",
       "Plastering and decoration",
       "One project manager throughout",
+      "Garage conversions",
     ],
     faqs: [
       {
@@ -119,7 +122,7 @@ export const services: Service[] = [
     slug: "loft-conversions",
     title: "Loft Conversions",
     short: "Turn unused attic space into bedrooms, offices and living space.",
-    metaTitle: "Loft Conversions Glasgow | Attic Conversions | RC Renovations",
+    metaTitle: "Loft Conversions Glasgow | Attic Conversions",
     metaDescription:
       "Loft and attic conversions across Glasgow, Hamilton and surrounding areas. Bedrooms, home offices and en-suites, structural work, stairs, insulation and finishing.",
     intro:
@@ -135,6 +138,7 @@ export const services: Service[] = [
       "Insulation to current standards",
       "En-suite plumbing",
       "Building warrant support",
+      "Loft ladders and hatch installation",
     ],
     faqs: [
       {
@@ -151,7 +155,7 @@ export const services: Service[] = [
     slug: "bespoke-joinery",
     title: "Bespoke Joinery",
     short: "Made-to-measure wardrobes, media walls, alcove units and custom carpentry.",
-    metaTitle: "Bespoke Joinery Glasgow | Custom Carpentry | RC Renovations",
+    metaTitle: "Bespoke Joinery Glasgow | Custom Carpentry",
     metaDescription:
       "Bespoke joinery in Glasgow and Lanarkshire: fitted wardrobes, media walls, alcove shelving, panelling and custom carpentry, made to measure and hand finished.",
     intro:
@@ -167,6 +171,8 @@ export const services: Service[] = [
       "Wall panelling and wainscoting",
       "Internal doors and facings",
       "Staircase renovation",
+      "Understairs storage",
+      "Timber balustrades and handrails",
     ],
     faqs: [
       {
@@ -183,7 +189,7 @@ export const services: Service[] = [
     slug: "doors-and-flooring",
     title: "Doors & Flooring",
     short: "Internal doors, hardwood and laminate flooring, skirtings and finishing joinery.",
-    metaTitle: "Door Fitting & Flooring Glasgow | RC Renovations",
+    metaTitle: "Door Fitting & Flooring Glasgow",
     metaDescription:
       "Internal door fitting, laminate, LVT and hardwood flooring across Glasgow and Lanarkshire. Skirtings, facings and finishing joinery by time-served joiners.",
     intro:
@@ -199,6 +205,8 @@ export const services: Service[] = [
       "Subfloor preparation",
       "Skirtings, facings and trims",
       "Handles, hinges and ironmongery",
+      "Bi-fold and sliding doors",
+      "Architrave, beading and dado rails",
     ],
     faqs: [
       {
@@ -215,7 +223,7 @@ export const services: Service[] = [
     slug: "garden-rooms-and-decking",
     title: "Garden Rooms & Decking",
     short: "Insulated garden offices, composite decking and outdoor structures.",
-    metaTitle: "Garden Rooms & Decking Glasgow | RC Renovations",
+    metaTitle: "Garden Rooms & Decking Glasgow",
     metaDescription:
       "Insulated garden rooms, garden offices and composite decking across Glasgow and Lanarkshire. Built for Scottish weather with proper foundations and finishes.",
     intro:
@@ -231,6 +239,7 @@ export const services: Service[] = [
       "Balustrades, steps and lighting",
       "Pergolas and outdoor structures",
       "Built for Scottish weather",
+      "Sleeper raised beds and garden landscaping",
     ],
     faqs: [
       {
@@ -247,7 +256,7 @@ export const services: Service[] = [
     slug: "full-home-renovations",
     title: "Full Home Renovations",
     short: "Whole-property refurbishments managed end to end under one contract.",
-    metaTitle: "Full Home Renovations Glasgow | Property Refurbishment | RC Renovations",
+    metaTitle: "Full Home Renovations Glasgow | Property Refurbishment",
     metaDescription:
       "Complete home renovations across Glasgow and Lanarkshire. Whole-property refurbishments, buy-to-let refits and period property upgrades managed under one contract.",
     intro:
@@ -263,6 +272,8 @@ export const services: Service[] = [
       "Period and tenement properties",
       "All trades coordinated",
       "Single fixed contract",
+      "Timber repairs: rot, woodworm and floorboards",
+      "Between-tenancy landlord maintenance",
     ],
     faqs: [
       {
@@ -272,6 +283,230 @@ export const services: Service[] = [
       {
         q: "Do you work with landlords?",
         a: "Regularly. We do between-tenancy refits, EPC-driven upgrades and full refurbishments for landlords across Glasgow and Lanarkshire, and can work to letting-agent timescales.",
+      },
+    ],
+  },
+  {
+    slug: "fire-doors",
+    title: "Fire Doors",
+    short: "FD30 and FD60 fire door installation for landlords, HMOs and commercial premises.",
+    metaTitle: "Fire Door Installation Glasgow | FD30 & FD60 Fire Doors",
+    metaDescription:
+      "FD30 and FD60 fire door installation across Glasgow and Lanarkshire for landlords, HMOs and commercial premises. Correct intumescent strips, seals and closers fitted to regulation. Free quotes.",
+    intro:
+      "Compliance work that has to be right first time. We install FD30 and FD60 fire doors for landlords, HMOs, flats and commercial premises, fitted to the standard your certification depends on.",
+    body: [
+      "Every fire door we fit gets the correct intumescent strips, smoke seals, hinges and self-closers for its rating, with gaps set to spec rather than eyeballed. That's the difference between a door that looks right and one that actually performs in a fire.",
+      "We work regularly with landlords, letting agents and factors on flats and HMOs where fire door compliance is a legal requirement, and can supply documentation for your records or an upcoming inspection.",
+    ],
+    features: [
+      "FD30 and FD60 rated doors",
+      "Intumescent strips and smoke seals",
+      "Correct hinges and self-closers",
+      "HMO and landlord compliance",
+      "Commercial premises covered",
+      "Certification-ready installation",
+    ],
+    faqs: [
+      {
+        q: "Do I legally need fire doors in my rental property?",
+        a: "Most flats, HMOs and multi-occupancy buildings in Scotland require fire doors to communal areas and certain internal rooms. Requirements vary by property type, so we'll advise on what your specific building needs.",
+      },
+      {
+        q: "What's the difference between FD30 and FD60 doors?",
+        a: "The number is the minutes of fire resistance the door provides: FD30 for 30 minutes, FD60 for 60. Which you need depends on the building's fire strategy, usually set out by your factor, building warrant or a fire risk assessment.",
+      },
+    ],
+  },
+  {
+    slug: "media-walls",
+    title: "Media Walls",
+    short: "Bespoke media walls with recessed TV, electric fire and hidden cabling, built to your room.",
+    metaTitle: "Media Wall Installation Glasgow | Bespoke TV & Fireplace Walls",
+    metaDescription:
+      "Bespoke media walls built and fitted across Glasgow and Lanarkshire. Recessed TV, electric fireplace opening, hidden cable routing and integrated shelving. Free quotes.",
+    intro:
+      "A media wall built around your TV size and room, not an off-the-shelf kit. Recessed screen, electric fireplace opening, hidden cabling and integrated shelving or lighting, framed and finished ready for decoration.",
+    body: [
+      "We design each media wall to your room's exact dimensions and your TV, so the recess fits properly instead of the TV sitting proud of the frame. Electric fireplace openings, cable routes and power points are planned in before we start building, not bodged in afterwards.",
+      "Framed in timber stud, boarded and finished square and flush, with shelving, lighting or storage built in either side if you want it. Ready for your decorator, or we can coordinate that too.",
+    ],
+    features: [
+      "Recessed TV opening, sized to your screen",
+      "Electric fireplace openings",
+      "Hidden cable routing",
+      "Integrated shelving and lighting",
+      "Framed, boarded and ready to decorate",
+      "Designed to your room, not a fixed kit",
+    ],
+    faqs: [
+      {
+        q: "Can you fit an electric fire into the media wall?",
+        a: "Yes, electric fire openings are one of our most requested features. We build the opening to your fire's exact dimensions and coordinate the electrical connection.",
+      },
+      {
+        q: "How long does a media wall take to build?",
+        a: "Most media walls take 2–4 days to frame, board and finish, depending on complexity and whether we're also fitting shelving or lighting.",
+      },
+    ],
+  },
+  {
+    slug: "fitted-wardrobes",
+    title: "Fitted Wardrobes",
+    short: "Made-to-measure wardrobes built around sloped ceilings, chimney breasts and awkward corners.",
+    metaTitle: "Fitted Wardrobes Glasgow | Made-to-Measure Bedroom Storage",
+    metaDescription:
+      "Fitted wardrobes made to measure for bedrooms of any shape across Glasgow and Lanarkshire. Hinged or sliding doors, finished flush to walls and ceiling. Free quotes.",
+    intro:
+      "Off-the-shelf wardrobes never fit a real bedroom. We build fitted wardrobes to measure for any shape of room, sloped ceilings and chimney breasts included, finished flush for a proper built-in look.",
+    body: [
+      "Every wardrobe is measured on site and built around what you actually own: hanging rails, shelving, drawers and shoe storage set out to suit your clothes rather than a generic layout.",
+      "Hinged or sliding doors, finished in your choice of paint or veneer and fixed flush to the wall and ceiling, so there's no gap, no wobble and no visible fixings.",
+    ],
+    features: [
+      "Built to measure for any room shape",
+      "Sloped ceilings and chimney breasts",
+      "Hinged or sliding doors",
+      "Hanging rails, shelving and drawers",
+      "Shoe storage and internal fit-out",
+      "Finished flush for a built-in look",
+    ],
+    faqs: [
+      {
+        q: "How much do fitted wardrobes cost?",
+        a: "Most fitted wardrobe projects fall between £1,200 and £3,500 depending on size, doors and internal fit-out. Every job is quoted individually after a free measuring visit.",
+      },
+      {
+        q: "Can you fit wardrobes into a sloped ceiling or loft room?",
+        a: "Yes, awkward angles are exactly what fitted wardrobes are for. We scribe the carcass to the slope so the space is fully usable instead of wasted behind an off-the-shelf unit.",
+      },
+    ],
+  },
+  {
+    slug: "timber-fencing",
+    title: "Timber Fencing",
+    short: "Closeboard, feather edge, lap panel and slatted fencing, fitted properly and built to last.",
+    metaTitle: "Timber Fencing Glasgow | Fence Installation & Gates",
+    metaDescription:
+      "Timber fencing supply and installation across Glasgow and Lanarkshire. Closeboard, feather edge, lap panel and slatted fencing, plus matching gates. Free quotes.",
+    intro:
+      "Fencing that's still standing straight in five years. We supply and fit closeboard, feather edge, lap panel, slatted and picket fencing, with posts set properly so it stays that way.",
+    body: [
+      "Posts are set in concrete to the correct depth, not just driven into the ground, with gravel boards fitted to keep timber off wet soil and extend its life. Lines are run straight and levels set correctly even on sloping gardens.",
+      "We remove and dispose of old fencing as part of the job, and can fit matching garden or driveway gates, hung on heavy-duty hinges with the right latches or locks for security.",
+    ],
+    features: [
+      "Closeboard, feather edge and lap panel",
+      "Slatted and picket styles",
+      "Posts set in concrete with gravel boards",
+      "Old fencing removed and disposed of",
+      "Straight lines on sloping ground",
+      "Matching garden and driveway gates",
+    ],
+    faqs: [
+      {
+        q: "How long does timber fencing last?",
+        a: "Properly installed timber fencing with gravel boards and concreted posts typically lasts 10–15 years, well beyond fencing that's just knocked into the ground. Pressure-treated timber and regular staining extend that further.",
+      },
+      {
+        q: "Who is responsible for a boundary fence?",
+        a: "Responsibility depends on your title deeds, which state which boundary is yours. We're happy to fit fencing regardless, but it's worth checking your deeds or asking your neighbour before replacing a shared boundary.",
+      },
+    ],
+  },
+  {
+    slug: "stud-wall-partitions",
+    title: "Stud Wall Partitions",
+    short: "Timber stud walls to divide a room, create a bedroom or close off open-plan space.",
+    metaTitle: "Stud Wall Partitions Glasgow | Timber Partition Walls",
+    metaDescription:
+      "Timber stud partition walls built and fitted across Glasgow and Lanarkshire. Framed, insulated for sound and boarded ready for plaster. Free quotes.",
+    intro:
+      "Need an extra room, or want to close off part of an open-plan space? We build timber stud partition walls, framed properly and insulated for sound, ready for your plasterer.",
+    body: [
+      "Every partition is set out to suit what's going in and around it: door openings positioned correctly, service voids left for pipework or cabling, and noggins built in wherever you'll want to hang shelves, a TV or a radiator.",
+      "Walls are insulated with acoustic slab as standard to cut sound transfer between rooms, then boarded and left square and true, ready to plaster and decorate.",
+    ],
+    features: [
+      "Framed to building standard",
+      "Acoustic insulation for sound",
+      "Door openings built in",
+      "Service voids for pipework and cabling",
+      "Noggins for wall-mounted fixings",
+      "Boarded ready for plaster",
+    ],
+    faqs: [
+      {
+        q: "Do I need a building warrant for a stud wall?",
+        a: "Most non-structural internal partitions don't need a warrant, but it depends on the room and whether it affects fire escape routes or ventilation. We'll flag it if your project needs one.",
+      },
+      {
+        q: "Will a stud wall block out noise?",
+        a: "A properly built partition with acoustic insulation cuts noise significantly compared to a bare stud wall, though it won't match a masonry wall. We'll talk through options if sound is a priority.",
+      },
+    ],
+  },
+  {
+    slug: "loft-boarding",
+    title: "Loft Boarding",
+    short: "Loft boarding on raised legs so insulation isn't compressed, for genuinely usable storage.",
+    metaTitle: "Loft Boarding Glasgow | Loft Storage Installation",
+    metaDescription:
+      "Loft boarding fitted across Glasgow and Lanarkshire on raised legs, so insulation performance isn't lost. Boarded walkway and storage, with loft ladders and lighting available. Free quotes.",
+    intro:
+      "Most loft boarding is fitted wrong: laid straight onto the joists, it squashes the insulation underneath and lets heat escape. We fit boards on raised legs so you get storage without losing performance.",
+    body: [
+      "Raising the boards above the joists on purpose-made legs means your insulation stays at full thickness, so you get proper loft storage without your heating bills going up.",
+      "Boards are laid across the joists with a clear walkway and defined storage area, and we can fit a loft ladder and lighting at the same time to make the space genuinely usable rather than a crawl space.",
+    ],
+    features: [
+      "Boards raised on legs, insulation untouched",
+      "Clear walkway and storage area",
+      "Loft ladders fitted at the same time",
+      "Lighting installation available",
+      "Boarded to current safety standards",
+      "Quick turnaround, usually 1 day",
+    ],
+    faqs: [
+      {
+        q: "Will loft boarding damage my insulation?",
+        a: "Not if it's done properly. We fit boards on raised legs specifically so the insulation underneath stays at full depth. Boarding straight onto joists compresses insulation and is something we won't do.",
+      },
+      {
+        q: "How much weight can a boarded loft take?",
+        a: "It depends on your joist size and spacing, which we check before boarding. Most standard lofts are fine for general storage; we'll tell you if yours has limitations before starting.",
+      },
+    ],
+  },
+  {
+    slug: "sheds-and-outbuildings",
+    title: "Sheds & Timber Outbuildings",
+    short: "Sheds, workshops and timber outbuildings built on site to your size, not a flat-pack limit.",
+    metaTitle: "Sheds & Timber Outbuildings Glasgow | Custom Garden Buildings",
+    metaDescription:
+      "Sheds, workshops and timber outbuildings built and installed across Glasgow and Lanarkshire, including base preparation, roofing and power routing. Free quotes.",
+    intro:
+      "Built on site to the size you actually need, not whatever a flat-pack range happens to offer. We build sheds, workshops and timber outbuildings complete with base, roofing and secure doors.",
+    body: [
+      "We prepare and level a proper base before building starts, then construct the structure on site: felt or EPDM roofing, secure doors and windows if you want them, with insulation and power routing available for a workshop or garden bar.",
+      "Because it's built rather than bolted together from a kit, we're not limited to standard dimensions: awkward garden shapes and specific size requirements are exactly what this service is for.",
+    ],
+    features: [
+      "Built on site to your exact size",
+      "Base preparation and levelling",
+      "Felt or EPDM roofing",
+      "Secure doors and optional windows",
+      "Insulation and power routing available",
+      "Not limited to flat-pack dimensions",
+    ],
+    faqs: [
+      {
+        q: "Do I need planning permission for a shed or outbuilding?",
+        a: "Most garden outbuildings fall under permitted development in Scotland provided they meet height and garden coverage rules. We'll advise on your specific garden at the quote stage.",
+      },
+      {
+        q: "Can you run power to a garden workshop?",
+        a: "Yes, we can route power for lighting, sockets and heating as part of the build, coordinated with a qualified electrician for the final connection.",
       },
     ],
   },
