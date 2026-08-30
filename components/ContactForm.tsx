@@ -58,7 +58,7 @@ export default function ContactForm() {
     "w-full rounded-md border border-edge bg-midnight px-4 py-3 text-snow placeholder:text-mist/60 focus:border-bright focus:outline-none focus:ring-1 focus:ring-bright";
 
   return (
-    <form onSubmit={onSubmit} className="card space-y-5">
+    <form onSubmit={onSubmit} action="/api/contact" method="post" className="card space-y-5">
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
           <label htmlFor="name" className="mb-1.5 block text-sm font-semibold text-steel">Name</label>

@@ -109,8 +109,12 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-edge py-5">
-        <div className="container-site flex flex-col items-center justify-between gap-2 text-xs text-mist sm:flex-row">
+        <div className="container-site flex flex-col items-center justify-between gap-3 text-xs text-mist sm:flex-row">
           <p>© {new Date().getFullYear()} {site.name}. All rights reserved.</p>
+          <div className="flex items-center gap-4">
+            <Link href="/privacy" className="hover:text-bright">Privacy Policy</Link>
+            <Link href="/terms" className="hover:text-bright">Terms &amp; Conditions</Link>
+          </div>
           <p>
             Website by{" "}
             <a href="https://munrostudio.co.uk" className="text-steel hover:text-bright" rel="noopener">

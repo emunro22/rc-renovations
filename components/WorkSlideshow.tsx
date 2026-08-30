@@ -30,7 +30,7 @@ export default function WorkSlideshow() {
             className="absolute inset-0 transition-opacity duration-[1400ms] ease-in-out"
             style={{ opacity: i === index ? 1 : 0 }}
           >
-            <GalleryImage src={img.src} alt="" priority={i === 0} />
+            <GalleryImage src={img.src} alt={img.alt} priority={i === 0} />
           </div>
         ))}
         <div className="absolute inset-0 bg-midnight/40" />

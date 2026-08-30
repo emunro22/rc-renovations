@@ -8,6 +8,31 @@ import { locations } from "@/lib/locations";
 import { reviews } from "@/lib/reviews";
 import { site } from "@/lib/site";
 
+const homeFaqs = [
+  {
+    q: "What areas do you cover?",
+    a: `We cover Glasgow and the whole of Lanarkshire, including ${site.areaServed
+      .slice(1, 7)
+      .join(", ")} and surrounding areas, with no travel charges.`,
+  },
+  {
+    q: "How much does a renovation or joinery job cost?",
+    a: "Every job is priced individually after a free survey, so we can give you a fixed written quote rather than a vague estimate. Get in touch with a few details and we'll arrange a visit.",
+  },
+  {
+    q: "How quickly can I get a quote?",
+    a: "We aim to get a fixed written quote to you within 48 hours of the free survey. For smaller jobs we can sometimes quote the same day.",
+  },
+  {
+    q: "Are you insured and do you guarantee your work?",
+    a: "Yes, we carry public liability insurance and guarantee our workmanship for a minimum of 12 months from completion. Full details are in our terms and conditions.",
+  },
+  {
+    q: "Do you handle the whole project, including other trades?",
+    a: "Yes. As a joinery-led firm we coordinate trusted electricians, plumbers and plasterers as part of the job, so you deal with one point of contact rather than juggling several trades yourself.",
+  },
+];
+
 const steps = [
   {
     title: "Free survey & quote",
@@ -28,8 +53,20 @@ const steps = [
 ];
 
 export default function HomePage() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: homeFaqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+
       <Hero />
 
       {/* Scroll cue */}
@@ -176,6 +213,33 @@ export default function HomePage() {
               ))}
             </div>
           </Reveal>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="border-t border-edge py-20">
+        <div className="container-site max-w-3xl">
+          <Reveal>
+            <p className="eyebrow">FAQs</p>
+            <h2 className="mt-3 font-display text-3xl font-extrabold tracking-tight sm:text-4xl">
+              Frequently asked questions
+            </h2>
+          </Reveal>
+          <div className="mt-8 space-y-4">
+            {homeFaqs.map((f, i) => (
+              <Reveal key={f.q} delay={i * 0.04}>
+                <details className="group rounded-xl border border-edge bg-panel p-5 open:border-royal">
+                  <summary className="cursor-pointer list-none font-display font-semibold text-snow marker:hidden">
+                    <span className="flex items-center justify-between gap-4">
+                      {f.q}
+                      <span className="text-bright transition-transform group-open:rotate-45">+</span>
+                    </span>
+                  </summary>
+                  <p className="mt-3 text-sm leading-relaxed text-mist">{f.a}</p>
+                </details>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </section>
 

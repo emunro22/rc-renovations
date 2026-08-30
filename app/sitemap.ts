@@ -7,12 +7,22 @@ import { site } from "@/lib/site";
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
 
-  const staticPages = ["", "/services", "/areas", "/about", "/gallery", "/blog", "/contact"].map(
+  const staticPages = [
+    "",
+    "/services",
+    "/areas",
+    "/about",
+    "/gallery",
+    "/blog",
+    "/contact",
+    "/privacy",
+    "/terms",
+  ].map(
     (path) => ({
       url: `${site.url}${path}`,
       lastModified: now,
       changeFrequency: "monthly" as const,
-      priority: path === "" ? 1 : 0.8,
+      priority: path === "" ? 1 : path === "/privacy" || path === "/terms" ? 0.2 : 0.8,
     })
   );
 

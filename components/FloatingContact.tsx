@@ -2,10 +2,11 @@
 
 import { site } from "@/lib/site";
 
-export default function FloatingContact() {
+export default function FloatingContact({ liftBy = 0 }: { liftBy?: number }) {
   return (
     <div
-      className="fixed inset-x-0 bottom-0 z-40 flex justify-end gap-3 px-4 pb-[calc(env(safe-area-inset-bottom)+1rem)] sm:right-6 sm:left-auto sm:px-0 sm:pb-6"
+      className="fixed inset-x-0 bottom-0 z-40 flex justify-end gap-3 px-4 pb-[calc(env(safe-area-inset-bottom)+1rem)] transition-transform duration-200 sm:right-6 sm:left-auto sm:px-0 sm:pb-6"
+      style={liftBy ? { transform: `translateY(-${liftBy}px)` } : undefined}
       aria-label="Quick contact"
     >
       <a

@@ -4,7 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SchemaOrg from "@/components/SchemaOrg";
-import FloatingContact from "@/components/FloatingContact";
+import ChromeOverlays from "@/components/ChromeOverlays";
 import { site } from "@/lib/site";
 
 const archivo = Archivo({
@@ -21,7 +21,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: "RC Renovations | Joinery & Renovations Glasgow & Lanarkshire",
+    default: "RC Renovations | Joiners Glasgow & Lanarkshire",
     template: "%s | RC Renovations",
   },
   description:
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     locale: "en_GB",
     url: site.url,
     siteName: site.name,
-    title: "RC Renovations | Joinery & Renovations Glasgow & Lanarkshire",
+    title: "RC Renovations | Joiners Glasgow & Lanarkshire",
     description:
       "Trusted joiners and renovation specialists covering Glasgow and Lanarkshire. Kitchens, bathrooms, extensions and bespoke joinery.",
     images: [{ url: "/logo.png", width: 1024, height: 1024, alt: "RC Renovations logo" }],
@@ -71,7 +71,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Header />
         <main>{children}</main>
         <Footer />
-        <FloatingContact />
+        <ChromeOverlays />
       </body>
     </html>
   );
