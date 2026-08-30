@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import SchemaOrg from "@/components/SchemaOrg";
 import FloatingContact from "@/components/FloatingContact";
 import { site } from "@/lib/site";
+import { Analytics } from "@vercel/analytics/next";
 
 const archivo = Archivo({
   subsets: ["latin"],
@@ -72,6 +73,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main>{children}</main>
         <Footer />
         <FloatingContact />
+        <Analytics />
       </body>
     </html>
   );
