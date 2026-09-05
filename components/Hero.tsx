@@ -40,7 +40,7 @@ export default function Hero() {
         <rect x="42" y="44" width="16" height="16" />
       </svg>
 
-      {/* Centered logo watermark, behind the text — mobile only */}
+      {/* Centered logo watermark, behind the text; mobile only */}
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 -z-10 flex items-center justify-center opacity-[0.05] lg:hidden"
