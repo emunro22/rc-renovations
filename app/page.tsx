@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import Reveal from "@/components/Reveal";
 import CTABand from "@/components/CTABand";
 import WorkSlideshow from "@/components/WorkSlideshow";
+import ReviewsMarquee from "@/components/ReviewsMarquee";
 import { services } from "@/lib/services";
 import { locations } from "@/lib/locations";
 import { getPlaceDetails } from "@/lib/places";
@@ -183,42 +184,15 @@ export default async function HomePage() {
               </a>
             </div>
           </Reveal>
-          <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            {place.reviews.map((t, i) => (
-              <Reveal key={t.id} delay={i * 0.08}>
-                <figure className="card h-full">
-                  <div className="flex gap-1 text-bright" aria-label={`${t.rating} out of 5 stars`}>
-                    {Array.from({ length: 5 }).map((_, j) => (
-                      <svg key={j} width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden>
-                        <path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9l-5.3 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z" />
-                      </svg>
-                    ))}
-                  </div>
-                  <blockquote className="mt-4 text-sm leading-relaxed text-steel">&ldquo;{t.quote}&rdquo;</blockquote>
-                  <figcaption className="mt-4 flex items-center gap-3 text-sm">
-                    {t.authorPhoto && (
-                      /* eslint-disable-next-line @next/next/no-img-element */
-                      <img
-                        src={t.authorPhoto}
-                        alt=""
-                        width={32}
-                        height={32}
-                        loading="lazy"
-                        referrerPolicy="no-referrer"
-                        className="h-8 w-8 shrink-0 rounded-full object-cover"
-                      />
-                    )}
-                    <span>
-                      <span className="block font-semibold text-snow">{t.name}</span>
-                      <span className="block text-xs text-mist">
-                        Google review{t.relativeTime ? ` · ${t.relativeTime}` : ""}
-                      </span>
-                    </span>
-                  </figcaption>
-                </figure>
-              </Reveal>
-            ))}
+          <div className="mt-12">
+            <ReviewsMarquee reviews={place.reviews} />
           </div>
+          <Reveal>
+            <div className="mt-10 flex flex-wrap items-center gap-4">
+              <Link href="/reviews" className="btn-primary">Read all our reviews</Link>
+              <Link href="/contact" className="btn-ghost">Get a Free Quote</Link>
+            </div>
+          </Reveal>
         </div>
       </section>
 

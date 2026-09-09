@@ -59,6 +59,31 @@ body {
   background: linear-gradient(90deg, transparent, #c7cdd8, transparent);
 }
 
+
+/* Auto-scrolling review strip. The track holds two identical copies of the list;
+   one period is half the track plus half a gap, which makes the loop seamless. */
+.marquee {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+}
+
+@keyframes marquee-ltr {
+  from {
+    transform: translateX(calc(-50% - 0.75rem));
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.marquee-track {
+  animation-name: marquee-ltr;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  will-change: transform;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

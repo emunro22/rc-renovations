@@ -101,6 +101,7 @@ export default function Footer() {
           <ul className="mt-4 space-y-2.5">
             <li><Link href="/about" className="text-sm text-mist hover:text-bright">About Us</Link></li>
             <li><Link href="/gallery" className="text-sm text-mist hover:text-bright">Our Work</Link></li>
+            <li><Link href="/reviews" className="text-sm text-mist hover:text-bright">Reviews</Link></li>
             <li><Link href="/blog" className="text-sm text-mist hover:text-bright">Blog</Link></li>
             <li><Link href="/contact" className="text-sm text-mist hover:text-bright">Get a Free Quote</Link></li>
           </ul>

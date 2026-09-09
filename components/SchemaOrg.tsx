@@ -46,7 +46,7 @@ export default async function SchemaOrg() {
       "@type": "Review",
       author: { "@type": "Person", name: r.name },
       reviewRating: { "@type": "Rating", ratingValue: r.rating, bestRating: 5 },
-      reviewBody: r.quote,
+      ...(r.quote ? { reviewBody: r.quote } : {}),
       ...(r.publishTime ? { datePublished: r.publishTime.slice(0, 10) } : {}),
       publisher: { "@type": "Organization", name: "Google" },
     })),

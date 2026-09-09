@@ -81,6 +81,12 @@ const FALLBACK: PlaceDetails = {
       rating: 5,
       quote: "Top quality work at a very fair price totally recommend",
     },
+    {
+      id: "fallback-jamie-mcvey",
+      name: "Jamie Mcvey",
+      rating: 5,
+      quote: "",
+    },
   ],
 };
 
@@ -108,8 +114,9 @@ function normalise(raw: ApiReview, index: number): PlaceReview | null {
     .trim();
   const name = raw.authorAttribution?.displayName?.trim();
 
-  // Google returns rating-only reviews with no body; they add nothing to a testimonial card.
-  if (!quote || !name) return null;
+  // Google returns rating-only reviews with no body text. We keep them (they are real
+  // ratings) and let the UI render the stars without inventing words for the customer.
+  if (!name) return null;
 
   return {
     id: raw.name ?? `review-${index}`,
