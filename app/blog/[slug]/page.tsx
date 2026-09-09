@@ -1,8 +1,10 @@
+import { Fragment } from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import Reveal from "@/components/Reveal";
 import CTABand from "@/components/CTABand";
+import RichText from "@/components/RichText";
 import { blogPosts, getBlogPost } from "@/lib/blog";
 import { getService } from "@/lib/services";
 import { site } from "@/lib/site";
@@ -38,6 +40,9 @@ export default function BlogPostPage({ params }: Props) {
 
   const related = post.relatedService ? getService(post.relatedService) : undefined;
   const otherPosts = blogPosts.filter((p) => p.slug !== post.slug).slice(0, 3);
+
+  // Drop the customer pull-quote a little under halfway through the article.
+  const quoteAfterIndex = Math.max(1, Math.floor(post.body.length * 0.45));
 
   const schema = {
     "@context": "https://schema.org",
@@ -91,17 +96,46 @@ export default function BlogPostPage({ params }: Props) {
           <div className="container-site grid gap-12 lg:grid-cols-[1.4fr,1fr]">
             <Reveal className="max-w-none">
               <div>
-                {post.body.map((para, i) =>
-                  para.startsWith("## ") ? (
-                    <h2 key={i} className="mt-10 font-display text-xl font-bold text-snow first:mt-0">
-                      {para.replace("## ", "")}
-                    </h2>
-                  ) : (
-                    <p key={i} className="mt-5 leading-relaxed text-steel first:mt-0">
-                      {para}
-                    </p>
-                  )
-                )}
+                {post.body.map((para, i) => (
+                  <Fragment key={i}>
+                    {para.startsWith("## ") ? (
+                      <h2 className="mt-10 font-display text-xl font-bold text-snow first:mt-0">
+                        {para.replace("## ", "")}
+                      </h2>
+                    ) : (
+                      <p className="mt-5 leading-relaxed text-steel first:mt-0">
+                        <RichText text={para} />
+                      </p>
+                    )}
+                    {post.testimonial && i === quoteAfterIndex && (
+                      <figure className="my-10 rounded-lg border-l-2 border-bright bg-panel p-6">
+                        <div className="flex gap-1 text-bright" aria-label="5 out of 5 stars">
+                          {Array.from({ length: 5 }).map((_, j) => (
+                            <svg key={j} width="15" height="15" viewBox="0 0 20 20" fill="currentColor" aria-hidden>
+                              <path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9l-5.3 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z" />
+                            </svg>
+                          ))}
+                        </div>
+                        <blockquote className="mt-4 font-display text-lg font-semibold leading-snug text-snow">
+                          &ldquo;{post.testimonial.quote}&rdquo;
+                        </blockquote>
+                        <figcaption className="mt-4 text-sm text-mist">
+                          <span className="font-semibold text-steel">{post.testimonial.name}</span>
+                          {" · "}
+                          {post.testimonial.context}
+                        </figcaption>
+                        <a
+                          href={site.googleReviewsUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="mt-4 inline-block font-display text-xs font-bold uppercase tracking-wider text-bright hover:underline"
+                        >
+                          See all our Google reviews →
+                        </a>
+                      </figure>
+                    )}
+                  </Fragment>
+                ))}
               </div>
             </Reveal>
 
@@ -130,6 +164,38 @@ export default function BlogPostPage({ params }: Props) {
                       </Link>
                     </>
                   )}
+                  {post.relatedLinks && post.relatedLinks.length > 0 && (
+                    <>
+                      <hr className="my-5 border-edge" />
+                      <h3 className="font-display text-sm font-bold uppercase tracking-wider text-mist">
+                        Explore next
+                      </h3>
+                      <ul className="mt-3 space-y-2">
+                        {post.relatedLinks.map((l) => (
+                          <li key={l.href}>
+                            <Link href={l.href} className="text-sm text-steel hover:text-bright hover:underline">
+                              {l.label}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </>
+                  )}
+                  <hr className="my-5 border-edge" />
+                  <h3 className="font-display text-sm font-bold uppercase tracking-wider text-mist">
+                    Rated 5.0 on Google
+                  </h3>
+                  <p className="mt-3 text-sm leading-relaxed text-mist">
+                    Every job we quote is priced after a free survey, and our workmanship is guaranteed.
+                  </p>
+                  <a
+                    href={site.googleReviewsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-3 inline-block font-display text-sm font-semibold text-bright hover:underline"
+                  >
+                    Read our Google reviews →
+                  </a>
                 </div>
               </Reveal>
             </aside>

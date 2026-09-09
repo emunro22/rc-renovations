@@ -20,6 +20,10 @@ export const site = {
   social: {
     instagram: "https://www.instagram.com/rc_renovations_/",
   },
+  // Google Business Profile. Live rating + reviews are pulled from the Places API
+  // (New) in lib/places.ts; the values below are the fallback if that call fails.
+  googlePlaceId: "ChIJCe0iSMhK9GkR4t5Bmg_qBgU",
+  googleReviewsUrl: "https://maps.app.goo.gl/284Wa9xepbNnXDy99",
   reviews: {
     ratingValue: 5.0,
     reviewCount: 8,

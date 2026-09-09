@@ -1,8 +1,10 @@
 import { site } from "@/lib/site";
 import { services } from "@/lib/services";
-import { reviews } from "@/lib/reviews";
+import { getPlaceDetails } from "@/lib/places";
 
-export default function SchemaOrg() {
+export default async function SchemaOrg() {
+  const place = await getPlaceDetails();
+
   const schema = {
     "@context": "https://schema.org",
     "@type": "HomeAndConstructionBusiness",
@@ -29,22 +31,24 @@ export default function SchemaOrg() {
     },
     openingHours: site.openingHours,
     areaServed: site.areaServed.map((name) => ({ "@type": "Place", name })),
-    sameAs: [site.social.instagram],
+    sameAs: [site.social.instagram, place.mapsUri],
     contactPoint: [
       { "@type": "ContactPoint", contactType: "customer service", telephone: site.phoneHref, areaServed: "GB" },
       { "@type": "ContactPoint", contactType: "customer service", url: site.whatsappHref, contactOption: "TollFree" },
     ],
     aggregateRating: {
       "@type": "AggregateRating",
-      ratingValue: site.reviews.ratingValue,
-      reviewCount: site.reviews.reviewCount,
+      ratingValue: place.ratingValue,
+      reviewCount: place.reviewCount,
       bestRating: 5,
     },
-    review: reviews.map((r) => ({
+    review: place.reviews.map((r) => ({
       "@type": "Review",
       author: { "@type": "Person", name: r.name },
       reviewRating: { "@type": "Rating", ratingValue: r.rating, bestRating: 5 },
       reviewBody: r.quote,
+      ...(r.publishTime ? { datePublished: r.publishTime.slice(0, 10) } : {}),
+      publisher: { "@type": "Organization", name: "Google" },
     })),
     hasOfferCatalog: {
       "@type": "OfferCatalog",

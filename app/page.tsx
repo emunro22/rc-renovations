@@ -5,7 +5,7 @@ import CTABand from "@/components/CTABand";
 import WorkSlideshow from "@/components/WorkSlideshow";
 import { services } from "@/lib/services";
 import { locations } from "@/lib/locations";
-import { reviews } from "@/lib/reviews";
+import { getPlaceDetails } from "@/lib/places";
 import { site } from "@/lib/site";
 
 const homeFaqs = [
@@ -52,7 +52,9 @@ const steps = [
   },
 ];
 
-export default function HomePage() {
+export default async function HomePage() {
+  const place = await getPlaceDetails();
+
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -152,7 +154,7 @@ export default function HomePage() {
             <h2 className="mt-3 font-display text-3xl font-extrabold tracking-tight sm:text-4xl">
               Word of mouth built this business
             </h2>
-            <div className="mt-4 flex items-center gap-2 text-sm text-steel">
+            <div className="mt-4 flex flex-wrap items-center gap-x-3 gap-y-2 text-sm text-steel">
               <div className="flex gap-0.5 text-bright" aria-hidden>
                 {Array.from({ length: 5 }).map((_, j) => (
                   <svg key={j} width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
@@ -160,14 +162,30 @@ export default function HomePage() {
                   </svg>
                 ))}
               </div>
-              <span>
-                {site.reviews.ratingValue.toFixed(1)} · {site.reviews.reviewCount} Google reviews
+              <span className="inline-flex items-center gap-1.5">
+                {place.ratingValue.toFixed(1)} · {place.reviewCount} reviews on
+                {/* Google attribution: required when Places API data is shown without a Google map. */}
+                <svg width="14" height="14" viewBox="0 0 48 48" aria-hidden className="shrink-0">
+                  <path fill="#4285F4" d="M45.1 24.5c0-1.6-.1-3.1-.4-4.5H24v8.5h11.8c-.5 2.8-2 5.1-4.4 6.7v5.5h7.1c4.2-3.8 6.6-9.5 6.6-16.2z" />
+                  <path fill="#34A853" d="M24 46c6 0 11-2 14.5-5.3l-7.1-5.5c-2 1.3-4.5 2.1-7.4 2.1-5.7 0-10.6-3.9-12.3-9.1H4.3v5.7C7.8 41 15.3 46 24 46z" />
+                  <path fill="#FBBC05" d="M11.7 28.2c-.4-1.3-.7-2.7-.7-4.2s.3-2.9.7-4.2v-5.7H4.3A22 22 0 0 0 2 24c0 3.6.9 6.9 2.3 9.9l7.4-5.7z" />
+                  <path fill="#EA4335" d="M24 10.7c3.2 0 6.1 1.1 8.4 3.3l6.3-6.3C34.9 4.1 30 2 24 2 15.3 2 7.8 7 4.3 14.1l7.4 5.7c1.7-5.2 6.6-9.1 12.3-9.1z" />
+                </svg>
+                <span className="sr-only">Google</span>
               </span>
+              <a
+                href={place.mapsUri}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-display text-xs font-bold uppercase tracking-wider text-bright hover:underline"
+              >
+                Read them on Google →
+              </a>
             </div>
           </Reveal>
           <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            {reviews.map((t, i) => (
-              <Reveal key={t.name} delay={i * 0.08}>
+            {place.reviews.map((t, i) => (
+              <Reveal key={t.id} delay={i * 0.08}>
                 <figure className="card h-full">
                   <div className="flex gap-1 text-bright" aria-label={`${t.rating} out of 5 stars`}>
                     {Array.from({ length: 5 }).map((_, j) => (
@@ -177,9 +195,25 @@ export default function HomePage() {
                     ))}
                   </div>
                   <blockquote className="mt-4 text-sm leading-relaxed text-steel">&ldquo;{t.quote}&rdquo;</blockquote>
-                  <figcaption className="mt-4 text-sm">
-                    <span className="font-semibold text-snow">{t.name}</span>
-                    <span className="text-mist"> · Google review</span>
+                  <figcaption className="mt-4 flex items-center gap-3 text-sm">
+                    {t.authorPhoto && (
+                      /* eslint-disable-next-line @next/next/no-img-element */
+                      <img
+                        src={t.authorPhoto}
+                        alt=""
+                        width={32}
+                        height={32}
+                        loading="lazy"
+                        referrerPolicy="no-referrer"
+                        className="h-8 w-8 shrink-0 rounded-full object-cover"
+                      />
+                    )}
+                    <span>
+                      <span className="block font-semibold text-snow">{t.name}</span>
+                      <span className="block text-xs text-mist">
+                        Google review{t.relativeTime ? ` · ${t.relativeTime}` : ""}
+                      </span>
+                    </span>
                   </figcaption>
                 </figure>
               </Reveal>
