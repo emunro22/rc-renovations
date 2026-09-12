@@ -4,6 +4,30 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 
 const STORAGE_KEY = "rc-cookie-consent";
+const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
+
+// GA4 sets cookies, so it is injected only once the visitor has accepted and
+// never on page load. The cookieless Vercel analytics runs either way, which is
+// what keeps a decline from leaving us with no numbers at all.
+function loadGoogleAnalytics() {
+  if (!GA_MEASUREMENT_ID || document.getElementById("ga4-script")) return;
+
+  const loader = document.createElement("script");
+  loader.id = "ga4-script";
+  loader.async = true;
+  loader.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
+  document.head.appendChild(loader);
+
+  const config = document.createElement("script");
+  config.id = "ga4-config";
+  config.innerHTML = `
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '${GA_MEASUREMENT_ID}', { anonymize_ip: true });
+  `;
+  document.head.appendChild(config);
+}
 
 export default function CookieConsent({
   onHeightChange,
@@ -16,7 +40,9 @@ export default function CookieConsent({
   useEffect(() => {
     let shouldShow = true;
     try {
-      shouldShow = !localStorage.getItem(STORAGE_KEY);
+      const stored = localStorage.getItem(STORAGE_KEY);
+      shouldShow = !stored;
+      if (stored === "accepted") loadGoogleAnalytics();
     } catch {
       shouldShow = true;
     }
@@ -45,6 +71,7 @@ export default function CookieConsent({
     } catch {
       // localStorage unavailable, still hide the banner for this visit
     }
+    if (value === "accepted") loadGoogleAnalytics();
     setVisible(false);
   }
 
